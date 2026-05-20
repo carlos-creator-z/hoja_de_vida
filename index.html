@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carlos Esteban Ramírez Leal — Fullstack Developer</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════
+       HEADER / NAV
+  ══════════════════════════════════════ -->
+  <header class="site-header" id="top">
+    <div class="container nav-inner">
+      <span class="logo">CERL<span class="logo-dot">.</span></span>
+      <nav class="nav-links">
+        <a href="#about" class="nav-link">Sobre mí</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Proyectos</a>
+        <a href="#contact" class="nav-link">Contacto</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="#about" class="mobile-link">Sobre mí</a>
+      <a href="#skills" class="mobile-link">Skills</a>
+      <a href="#projects" class="mobile-link">Proyectos</a>
+      <a href="#contact" class="mobile-link">Contacto</a>
+    </div>
+  </header>
+
+  <!-- ══════════════════════════════════════
+       HERO
+  ══════════════════════════════════════ -->
+  <section class="hero" id="hero">
+    <div class="hero-gradient-bg" aria-hidden="true">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+    </div>
+    <div class="container hero-inner">
+      <div class="hero-tag fade-in delay-1">Fullstack Developer · Backend Specialist</div>
+      <h1 class="hero-name fade-in delay-2">
+        Carlos<br />
+        <span class="hero-name-last">Esteban<br />Ramírez</span>
+      </h1>
+      <p class="hero-sub fade-in delay-3">
+        Construyo experiencias digitales robustas con JavaScript, Node.js,<br class="br-desktop" />
+        PHP, SQL y MongoDB — desde el servidor hasta la pantalla.
+      </p>
+      <div class="hero-cta fade-in delay-4">
+        <a href="#projects" class="btn-pill">Ver proyectos</a>
+        <a href="#contact" class="btn-ghost">Contactar</a>
+      </div>
+    </div>
+    <div class="hero-scroll-hint fade-in delay-5" aria-hidden="true">
+      <span>scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       SOBRE MÍ
+  ══════════════════════════════════════ -->
+  <section class="about section" id="about">
+    <div class="container about-grid">
+      <div class="about-photo-wrap slide-in-left">
+        <div class="photo-frame">
+          <img src="avatar.jpg" alt="Carlos Esteban Ramírez Leal" class="avatar-img" />
+          <div class="photo-accent-border"></div>
+        </div>
+        <div class="location-tag">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Ibagué, Tolima
+        </div>
+      </div>
+      <div class="about-text slide-in-right">
+        <p class="section-label">— Sobre mí</p>
+        <h2 class="section-heading">Hola, soy <span class="gradient-text">Carlos</span></h2>
+        <p class="about-body">
+          Desarrollador Fullstack con especialización en <strong>backend</strong>, apasionado por construir
+          arquitecturas eficientes, APIs escalables y sistemas que realmente funcionan. Me muevo con
+          comodidad tanto en el servidor como en el cliente, pero mi hogar natural es la lógica del servidor.
+        </p>
+        <p class="about-body">
+          Trabajo con tecnologías como <strong>Node.js, Express, PHP, SQL y MongoDB</strong> para el
+          backend, y domino <strong>JavaScript, HTML5 y CSS3</strong> para el frontend.
+          Me interesa el código limpio, las buenas prácticas y las soluciones que escalan.
+        </p>
+        <div class="about-stats">
+          <div class="stat-item">
+            <span class="stat-num">8+</span>
+            <span class="stat-label">Tecnologías</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">100%</span>
+            <span class="stat-label">Comprometido</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">∞</span>
+            <span class="stat-label">Curiosidad</span>
+          </div>
+        </div>
+        <a href="https://github.com/carlos-creator-z" target="_blank" rel="noopener" class="btn-ghost about-github">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          GitHub: carlos-creator-z
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       SKILLS
+  ══════════════════════════════════════ -->
+  <section class="skills section" id="skills">
+    <div class="container">
+      <div class="section-header fade-in">
+        <p class="section-label">— Stack Tecnológico</p>
+        <h2 class="section-heading">Mis <span class="gradient-text">Skills</span></h2>
+        <p class="section-sub">Haz clic en cualquier tecnología para conocer más.</p>
+      </div>
+
+      <div class="skills-grid">
+
+        <button class="skill-card fade-in" data-skill="js">
+          <div class="skill-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="3" fill="#F7DF1E"/><path d="M6.5 17.5c.4.7 1 1.2 2 1.2 1.1 0 1.8-.55 1.8-1.55V11h-1.8v6.1c0 .4-.2.6-.5.6-.3 0-.5-.2-.7-.5l-.8.8zm5.5-.2c.5.9 1.3 1.4 2.5 1.4 1.3 0 2.3-.7 2.3-1.9 0-1.1-.7-1.6-1.8-2.1l-.4-.2c-.5-.2-.7-.4-.7-.7 0-.3.2-.5.6-.5.3 0 .6.1.8.5l1-.6c-.4-.8-1.1-1.1-1.8-1.1-1.2 0-1.9.7-1.9 1.7 0 1.1.7 1.6 1.6 2l.4.2c.6.3.9.5.9.8 0 .3-.3.6-.8.6-.5 0-.9-.3-1.1-.7l-1.1.6z" fill="#000"/></svg>
+          </div>
+          <span class="skill-name">JavaScript</span>
+          <span class="skill-arrow">↗</span>
+        </button>
+
+        <button class="skill-card fade-in delay-1" data-skill="html">
+          <div class="skill-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="3" fill="#E34F26"/><path d="M4 3l1.5 17L12 22l6.5-2L20 3H4zm13.2 5.5H8.5l.2 2.2h8.3l-.7 7-4.3 1.2-4.3-1.2-.3-3.3h2.2l.1 1.5 2.3.6 2.3-.6.2-2.5H7.7L7.2 8.5h9.2l-.2-1.4H7.2L6.8 5h10.6l-.2 3.5z" fill="#fff"/></svg>
+          </div>
+          <span class="skill-name">HTML5</span>
+          <span class="skill-arrow">↗</span>
+        </button>
+
+        <button class="skill-card fade-in delay-2" data-skill="css">
+          <div class="skill-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="https://miro.medium.com/1*Aenej4dxqEZ9j7zsI9pSnw.png"><rect width="24" height="24" rx="3" fill="#1572B6"/><path d="M4 3l1.5 17L12 22l6.5-2L20 3H4zm9 15.4l-3.6-1-.2-2.7h1.9l.1 1.2 1.8.5 1.8-.5.2-2.3-7.8-2v-2.1l7.7-2.1.2-2.1H7.3l-.2-2.3h9.8l-.6 6.7-4.3 1.2-4.3-1.2-.1 1 4.4 1.1 4.4-1.1-.3 4.2-4 1.1z" fill="#fff"/></svg>
+          </div>
+          <span class="skill-name">CSS3</span>
+          <span class="skill-arrow">↗</span>
+        </button>
+
+        <button class="skill-card fade-in delay-3" data-skill="node">
+          <div class="skill-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="3" fill="#339933"/><path d="M12 3L4 7.5v9L12 21l8-4.5v-9L12 3zm5.5 12.5L12 18.7l-5.5-3.2V8.5L12 5.3l5.5 3.2v7z" fill="#fff"/></svg>
+          </div>
+          <span class="skill-name">Node.js</span>
+          <span class="skill-arrow">↗</span>
+        </button>
+
+        <button class="skill-card fade-in delay-1" data-skill="express">
+          <div class="skill-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="3" fill="#fff" fill-opacity=".08" stroke="rgba(255,255,255,.2)" stroke-width="1"/><text x="4" y="16" font-size="9" font-family="monospace" fill="#fff" font-weight="700">EX</text></svg>
+          </div>
+          <span class="skill-name">Express</span>
+          <span class="skill-arrow">↗</span>
+        </button>
+
+        <button class="skill-card fade-in delay-2" data-skill="sql">
+          <div class="skill-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="3" fill="#4479A1"/><ellipse cx="12" cy="8" rx="6" ry="2.5" fill="#fff" fill-opacity=".9"/><path d="M6 8v4c0 1.38 2.69 2.5 6 2.5s6-1.12 6-2.5V8" stroke="#fff" stroke-width="1.2" fill="none"/><path d="M6 12v4c0 1.38 2.69 2.5 6 2.5s6-1.12 6-2.5v-4" stroke="#fff" stroke-width="1.2" fill="none"/></svg>
+          </div>
+          <span class="skill-name">SQL</span>
+          <span class="skill-arrow">↗</span>
+        </button>
+
+        <button class="skill-card fade-in delay-3" data-skill="php">
+          <div class="skill-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="3" fill="#777BB4"/><ellipse cx="12" cy="12" rx="8" ry="4.5" fill="#fff" fill-opacity=".15"/><text x="6" y="15.5" font-size="8" font-family="monospace" fill="#fff" font-weight="700">PHP</text></svg>
+          </div>
+          <span class="skill-name">PHP</span>
+          <span class="skill-arrow">↗</span>
+        </button>
+
+        <button class="skill-card fade-in delay-4" data-skill="mongo">
+          <div class="skill-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="3" fill="#47A248"/><path d="M12 3c0 0-4 5.5-4 9.5a4 4 0 008 0C16 8.5 12 3 12 3z" fill="#fff" fill-opacity=".9"/><path d="M12 3v15" stroke="#fff" stroke-width="1.5" stroke-opacity=".6"/></svg>
+          </div>
+          <span class="skill-name">MongoDB</span>
+          <span class="skill-arrow">↗</span>
+        </button>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       SKILL MODAL
+  ══════════════════════════════════════ -->
+  <div class="skill-modal-overlay" id="skillModal" role="dialog" aria-modal="true" aria-label="Detalle de tecnología">
+    <div class="skill-modal-box">
+      <button class="modal-close" id="modalClose" aria-label="Cerrar">✕</button>
+      <div class="modal-icon-wrap" id="modalIcon"></div>
+      <h3 class="modal-title" id="modalTitle"></h3>
+      <p class="modal-category" id="modalCategory"></p>
+      <p class="modal-desc" id="modalDesc"></p>
+      <div class="modal-tags" id="modalTags"></div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       PROYECTOS
+  ══════════════════════════════════════ -->
+  <section class="projects section" id="projects">
+    <div class="container">
+      <div class="section-header fade-in">
+        <p class="section-label">— Portafolio</p>
+        <h2 class="section-heading">Mis <span class="gradient-text">Proyectos</span></h2>
+      </div>
+
+      <div class="projects-grid">
+
+        <article class="project-card fade-in">
+          <div class="project-number">01</div>
+          <div class="project-content">
+            <h3 class="project-title">Cine Reino del Séptimo Arte</h3>
+            <p class="project-desc">
+              Plataforma web de cinematografía que permite explorar, descubrir y gestionar
+              películas. Desarrollada con arquitectura fullstack, base de datos relacional
+              y renderizado dinámico del lado del servidor.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">Node.js</span>
+              <span class="tech-tag">Express</span>
+              <span class="tech-tag">MONGODB</span>
+              <span class="tech-tag">HTML5</span>
+              <span class="tech-tag">CSS3</span>
+            </div>
+            <div class="project-links">
+              <a href="https://cine-reino-del-septimo-arte-1.onrender.com" target="_blank" rel="noopener" class="btn-pill project-btn">
+                Ver en vivo
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="project-visual">
+            <div class="project-preview-gradient">
+              <span class="preview-text">🎬</span>
+            </div>
+          </div>
+        </article>
+         <article class="project-card fade-in">
+          <div class="project-number">02</div>
+          <div class="project-content">
+            <h3 class="project-title">Save DRIVE IA</h3>
+            <p class="project-desc">
+              Un modelo de inteligencia artificial diseñado para analizar los estados del sueño
+              del conductor y soltar una alarma si se presenta un micro sueño para evitar accidentes
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">HTML5</span>
+              <span class="tech-tag">CSS3</span>
+              <span class="tech-tag">TEACHABLE MACHINE</span>
+              <span class="tech-tag">JAVA SCRIPT</span>
+              <span class="tech-tag">MICRO:BIT</span>
+            </div>
+            <div class="project-links">
+              <a href="https://teachablemachine.withgoogle.com/models/bTI7H-EA5/" target="_blank" rel="noopener" class="btn-pill project-btn">
+                Ver en vivo
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="project-visual">
+            <div class="project-preview-gradient">
+              <span class="preview-text">🤖</span>
+            </div>
+          </div>
+        </article>
+        </article>
+         <article class="project-card fade-in">
+          <div class="project-number">03</div>
+          <div class="project-content">
+            <h3 class="project-title">TASK FLOW</h3>
+            <p class="project-desc">
+              Un gestor de tareas que te permite organizar tu dia a dia y tus proximas tareas
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">HTML5</span>
+              <span class="tech-tag">CSS3</span>
+              <span class="tech-tag">NODE.JS</span>
+              <span class="tech-tag">JAVA SCRIPT</span>
+              <span class="tech-tag">MONGODB</span>
+            </div>
+            <div class="project-links">
+              <a href="https://gestor-de-tareas-n1la.onrender.com" target="_blank" rel="noopener" class="btn-pill project-btn">
+                Ver en vivo
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="project-visual">
+            <div class="project-preview-gradient">
+              <span class="preview-text">📝</span>
+            </div>
+          </div>
+        </article>
+        <!-- Placeholder / Próximamente -->
+        <article class="project-card project-card--coming fade-in delay-2">
+          <div class="project-number">02</div>
+          <div class="project-content">
+            <h3 class="project-title">Próximo Proyecto</h3>
+            <p class="project-desc">
+              Siempre construyendo algo nuevo. Visita mi GitHub para ver el progreso
+              de proyectos en desarrollo, experimentos y código abierto.
+            </p>
+            <div class="project-links">
+              <a href="https://github.com/carlos-creator-z" target="_blank" rel="noopener" class="btn-ghost">
+                Ver GitHub
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="project-visual">
+            <div class="project-preview-gradient project-preview-gradient--dark">
+              <span class="preview-text">⚙️</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       CONTACTO
+  ══════════════════════════════════════ -->
+  <section class="contact section" id="contact">
+    <div class="contact-gradient-bg" aria-hidden="true"></div>
+    <div class="container contact-inner">
+      <div class="section-header fade-in">
+        <p class="section-label">— Contacto</p>
+        <h2 class="section-heading contact-heading">¿Trabajamos <span class="gradient-text">juntos?</span></h2>
+        <p class="section-sub">
+          Estoy disponible para proyectos freelance, colaboraciones y oportunidades laborales.
+        </p>
+      </div>
+
+      <div class="contact-cards fade-in delay-2">
+
+        <a href="mailto:carlos.trabajos.leal@gmail.com" class="contact-card">
+          <div class="contact-card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
+          </div>
+          <div>
+            <p class="contact-card-label">Email</p>
+            <p class="contact-card-value">carlos.trabajos.leal@gmail.com</p>
+          </div>
+        </a>
+
+        <a href="https://wa.me/573217869355" target="_blank" rel="noopener" class="contact-card">
+          <div class="contact-card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M11.999 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2.006 22l4.932-1.418A9.943 9.943 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2z" fill-rule="evenodd" clip-rule="evenodd"/></svg>
+          </div>
+          <div>
+            <p class="contact-card-label">WhatsApp</p>
+            <p class="contact-card-value">+57 321 786 9355</p>
+          </div>
+        </a>
+
+        <a href="https://github.com/carlos-creator-z" target="_blank" rel="noopener" class="contact-card">
+          <div class="contact-card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          </div>
+          <div>
+            <p class="contact-card-label">GitHub</p>
+            <p class="contact-card-value">carlos-creator-z</p>
+          </div>
+        </a>
+
+        <div class="contact-card contact-card--location">
+          <div class="contact-card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <p class="contact-card-label">Ubicación</p>
+            <p class="contact-card-value">Ibagué, Tolima · Colombia</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════ -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span class="footer-logo">CERL<span class="logo-dot">.</span></span>
+      <p class="footer-copy">© 2026 Carlos Esteban Ramírez Leal. Todos los derechos reservados.</p>
+      <a href="#top" class="btn-ghost footer-top">↑ Volver arriba</a>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
