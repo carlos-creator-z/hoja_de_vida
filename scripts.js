@@ -1,7 +1,7 @@
 /* ══════════════════════════════════════════════════
    script.js — Portfolio Carlos Esteban Ramírez Leal
 ══════════════════════════════════════════════════ */
- 
+
 // ─── SKILL DATA ────────────────────────────────────
 const skillData = {
   js: {
@@ -61,13 +61,13 @@ const skillData = {
     iconSvg: `<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="3" fill="#47A248"/><path d="M12 3c0 0-4 5.5-4 9.5a4 4 0 008 0C16 8.5 12 3 12 3z" fill="#fff" fill-opacity=".9"/><path d="M12 3v15" stroke="#fff" stroke-width="1.5" stroke-opacity=".6"/></svg>`,
   },
 };
- 
+
 // ─── SCROLL OBSERVER ───────────────────────────────
 const observerOptions = {
   threshold: 0.12,
   rootMargin: '0px 0px -40px 0px',
 };
- 
+
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -75,20 +75,20 @@ const observer = new IntersectionObserver((entries) => {
     }
   });
 }, observerOptions);
- 
+
 document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right').forEach(el => {
   observer.observe(el);
 });
- 
+
 // ─── NAVBAR ────────────────────────────────────────
 const hamburger = document.getElementById('hamburger');
 const mobileMenu = document.getElementById('mobile-menu');
- 
+
 hamburger.addEventListener('click', () => {
   hamburger.classList.toggle('open');
   mobileMenu.classList.toggle('open');
 });
- 
+
 // Close mobile menu on link click
 document.querySelectorAll('.mobile-link').forEach(link => {
   link.addEventListener('click', () => {
@@ -96,7 +96,7 @@ document.querySelectorAll('.mobile-link').forEach(link => {
     mobileMenu.classList.remove('open');
   });
 });
- 
+
 // Sticky header opacity
 const header = document.querySelector('.site-header');
 window.addEventListener('scroll', () => {
@@ -106,7 +106,7 @@ window.addEventListener('scroll', () => {
     header.style.background = 'rgba(0,0,0,0.75)';
   }
 }, { passive: true });
- 
+
 // ─── SKILL MODAL ───────────────────────────────────
 const modal        = document.getElementById('skillModal');
 const modalTitle   = document.getElementById('modalTitle');
@@ -115,16 +115,16 @@ const modalDesc    = document.getElementById('modalDesc');
 const modalIcon    = document.getElementById('modalIcon');
 const modalTags    = document.getElementById('modalTags');
 const modalClose   = document.getElementById('modalClose');
- 
+
 function openSkillModal(skillKey) {
   const skill = skillData[skillKey];
   if (!skill) return;
- 
+
   modalTitle.textContent    = skill.title;
   modalCategory.textContent = skill.category;
   modalDesc.textContent     = skill.desc;
   modalIcon.innerHTML       = skill.iconSvg;
- 
+
   modalTags.innerHTML = '';
   skill.tags.forEach(tag => {
     const span = document.createElement('span');
@@ -132,16 +132,16 @@ function openSkillModal(skillKey) {
     span.textContent = tag;
     modalTags.appendChild(span);
   });
- 
+
   modal.classList.add('open');
   document.body.style.overflow = 'hidden';
 }
- 
+
 function closeModal() {
   modal.classList.remove('open');
   document.body.style.overflow = '';
 }
- 
+
 document.querySelectorAll('.skill-card').forEach(card => {
   card.addEventListener('click', () => openSkillModal(card.dataset.skill));
   // Keyboard accessibility
@@ -153,17 +153,17 @@ document.querySelectorAll('.skill-card').forEach(card => {
     }
   });
 });
- 
+
 modalClose.addEventListener('click', closeModal);
- 
+
 modal.addEventListener('click', (e) => {
   if (e.target === modal) closeModal();
 });
- 
+
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') closeModal();
 });
- 
+
 // ─── SMOOTH SCROLL with offset ──────────────────────
 document.querySelectorAll('a[href^="#"]').forEach(link => {
   link.addEventListener('click', (e) => {
@@ -174,11 +174,11 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
     window.scrollTo({ top, behavior: 'smooth' });
   });
 });
- 
+
 // ─── ACTIVE NAV HIGHLIGHT ───────────────────────────
 const sections  = document.querySelectorAll('section[id]');
 const navLinks  = document.querySelectorAll('.nav-link');
- 
+
 const sectionObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -191,14 +191,14 @@ const sectionObserver = new IntersectionObserver((entries) => {
     }
   });
 }, { threshold: 0.4 });
- 
+
 sections.forEach(s => sectionObserver.observe(s));
- 
+
 // CSS for active nav
 const style = document.createElement('style');
 style.textContent = `.nav-link.active { color: var(--color-frost-white); } .nav-link.active::after { width: 100%; }`;
 document.head.appendChild(style);
- 
+
 // ─── CURSOR GLOW (optional) ──────────────────────────
 const cursorGlow = document.createElement('div');
 cursorGlow.style.cssText = `
@@ -214,13 +214,51 @@ cursorGlow.style.cssText = `
   will-change: left, top;
 `;
 document.body.appendChild(cursorGlow);
- 
+
 window.addEventListener('mousemove', (e) => {
   cursorGlow.style.left = e.clientX + 'px';
   cursorGlow.style.top  = e.clientY + 'px';
 }, { passive: true });
- 
-// ─── TYPED HERO SUBTITLE ─────────────────────────────
+
+// ─── CERT IMAGE MODAL ───────────────────────────────
+const certModal      = document.getElementById('certModal');
+const certModalImg   = document.getElementById('certModalImg');
+const certModalClose = document.getElementById('certModalClose');
+
+document.querySelectorAll('.cert-view-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const imgSrc = btn.dataset.img;
+    certModalImg.src = imgSrc;
+    certModal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  });
+});
+
+certModalClose.addEventListener('click', () => {
+  certModal.classList.remove('open');
+  document.body.style.overflow = '';
+});
+certModal.addEventListener('click', (e) => {
+  if (e.target === certModal) {
+    certModal.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+});
+
+// ─── PROGRESS BAR ANIMATION ON SCROLL ───────────────
+const progressObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.animationPlayState = 'running';
+    }
+  });
+}, { threshold: 0.4 });
+
+document.querySelectorAll('.cert-progress-fill').forEach(el => {
+  el.style.animationPlayState = 'paused';
+  progressObserver.observe(el);
+});
+
 // Subtle role rotation in hero tag
 const roles = [
   'Fullstack Developer · Backend Specialist',
@@ -243,4 +281,3 @@ if (heroTag) {
     }, 320);
   }, 3200);
 }
- 
